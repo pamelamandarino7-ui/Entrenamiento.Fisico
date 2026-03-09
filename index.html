@@ -1,0 +1,373 @@
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ccff00",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"],
+                        "sans": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .neon-border {
+            border: 1px solid #ccff00;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #ccff00;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-white antialiased overflow-x-hidden">
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-primary/20 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+                <h2 class="text-white text-xl font-black tracking-tighter">ELITE IA</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10"><a
+                    class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="#">Inicio</a>
+                <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="#features">Beneficios</a>
+                <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="#process">Proceso</a>
+                <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="#ecosystem">Ecosistema</a>
+            </nav>
+            <button onclick="document.getElementById('registrationModal').classList.remove('hidden')"
+                class="bg-primary text-black px-6 py-2 text-sm font-black uppercase tracking-widest hover:bg-white transition-all inline-block">
+                Empieza Ahora
+            </button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-end pb-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
+            <img alt="Atleta enfocada entrenando de perfil sosteniendo barra" class="w-full h-full object-cover object-top"
+                data-alt="Profile view of a determined athlete holding a barbell in a gym"
+                src="./atleta_hero_barra.png" />
+        </div>
+        <div class="relative z-20 max-w-7xl mx-auto w-full">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-6 italic">
+                    ENTRENA CON EL <span class="text-primary">PODER</span> DE LA IA
+                </h1>
+                <p class="text-lg md:text-xl font-light mb-8 max-w-xl text-slate-300">
+                    Optimiza tu rendimiento físico con entrenamientos inteligentes diseñados exclusivamente para tu
+                    biometría y objetivos.
+                </p>
+                <button onclick="document.getElementById('registrationModal').classList.remove('hidden')"
+                    class="bg-primary text-black px-10 py-4 text-lg font-black uppercase tracking-widest hover:scale-105 transition-transform inline-block">
+                    Empieza Ahora
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- AI Personalization Section -->
+    <section class="py-24 px-6 bg-black" id="features">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img alt="Atleta femenina entrenando con pesas"
+                    class="w-full aspect-[4/5] object-cover hover:brightness-110 transition-all duration-700"
+                    src="./atleta_femenina_entrenando.png" />
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-primary text-sm font-black uppercase tracking-[0.3em] mb-4">Personalización Extrema</h2>
+                <h3 class="text-4xl md:text-6xl font-black mb-8 leading-tight">CADA REPETICIÓN <br />CUENTA</h3>
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                    Nuestra tecnología patentada analiza tu rango de movimiento, velocidad y fatiga acumulada en tiempo
+                    real. La IA no solo cuenta tus repeticiones, las optimiza para asegurar que alcances el fallo
+                    muscular de manera segura y eficiente.
+                </p>
+                <div class="flex flex-col gap-6">
+                    <div class="flex gap-4 items-start border-l-2 border-primary pl-6">
+                        <div>
+                            <h4 class="font-bold text-xl mb-1">Carga Inteligente</h4>
+                            <p class="text-slate-500 text-sm">Ajustes automáticos de peso según tu rendimiento diario.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start border-l-2 border-primary pl-6">
+                        <div>
+                            <h4 class="font-bold text-xl mb-1">Bio-Feedback</h4>
+                            <p class="text-slate-500 text-sm">Corrección de postura inmediata mediante visión
+                                artificial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Elite Benefits Cards -->
+    <section class="py-20 px-6 bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-10 border border-white/10 hover:border-primary transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">fitness_center</span>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Workouts Personalizados</h3>
+                    <p class="text-slate-400">Planes únicos adaptados a tu biometría y nivel de experiencia actual.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-10 border border-white/10 hover:border-primary transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">monitoring</span>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Análisis de Rendimiento</h3>
+                    <p class="text-slate-400">Gráficas detalladas y métricas avanzadas de tu progreso físico real.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-10 border border-white/10 hover:border-primary transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">schedule</span>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Optimización de Tiempo</h3>
+                    <p class="text-slate-400">Entrenamientos de alta eficiencia diseñados para resultados rápidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it Works (3 Steps) -->
+    <section class="py-24 px-6 bg-black" id="process">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-7xl font-black uppercase italic italic text-stroke">CÓMO FUNCIONA</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="relative">
+                    <span class="text-8xl font-black text-primary/10 absolute -top-10 -left-4">01</span>
+                    <h3 class="text-primary text-2xl font-black mb-4 relative z-10">SCAN</h3>
+                    <p class="text-slate-400 leading-relaxed">Captura tu estado físico inicial y tus objetivos a corto y
+                        largo plazo mediante nuestra interfaz intuitiva.</p>
+                </div>
+                <div class="relative">
+                    <span class="text-8xl font-black text-primary/10 absolute -top-10 -left-4">02</span>
+                    <h3 class="text-primary text-2xl font-black mb-4 relative z-10">ANALYZE</h3>
+                    <p class="text-slate-400 leading-relaxed">Nuestra IA procesa tus datos biométricos para crear el
+                        algoritmo de entrenamiento perfecto para ti.</p>
+                </div>
+                <div class="relative">
+                    <span class="text-8xl font-black text-primary/10 absolute -top-10 -left-4">03</span>
+                    <h3 class="text-primary text-2xl font-black mb-4 relative z-10">TRAIN</h3>
+                    <p class="text-slate-400 leading-relaxed">Ejecuta tu rutina con asistencia en tiempo real y observa
+                        cómo la IA ajusta cada variable para tu éxito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ecosystem Integration -->
+    <section class="py-24 px-6 bg-zinc-950 border-y border-white/5" id="ecosystem">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-xl">
+                    <h2 class="text-primary text-sm font-black uppercase tracking-[0.3em] mb-4">Ecosistema Elite</h2>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase">INTEGRACIÓN TOTAL</h3>
+                </div>
+                <div class="flex gap-8 items-center opacity-70">
+                    <span class="material-symbols-outlined text-primary text-4xl">watch</span>
+                    <span class="material-symbols-outlined text-primary text-4xl">smartphone</span>
+                    <span class="material-symbols-outlined text-primary text-4xl">tablet</span>
+                    <span class="material-symbols-outlined text-primary text-4xl">devices</span>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="col-span-full relative">
+                    <div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+                        <div
+                            class="min-w-[300px] md:min-w-[400px] snap-center group relative overflow-hidden border border-primary/20">
+                            <img alt="Smartwatch App"
+                                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+                                src="./smartwatch_app.png" />
+                            <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
+                                <p class="text-primary font-bold tracking-widest text-xs uppercase">Smartwatch</p>
+                            </div>
+                        </div>
+                        <div
+                            class="min-w-[300px] md:min-w-[400px] snap-center group relative overflow-hidden border border-primary/20">
+                            <img alt="Tablet App"
+                                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+                                src="./tablet_app.png" />
+                            <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
+                                <p class="text-primary font-bold tracking-widest text-xs uppercase">Tablet Pro</p>
+                            </div>
+                        </div>
+                        <div
+                            class="min-w-[300px] md:min-w-[400px] snap-center group relative overflow-hidden border border-primary/20">
+                            <img alt="Mobile App"
+                                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+                                src="./mobile_app.png" />
+                            <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
+                                <p class="text-primary font-bold tracking-widest text-xs uppercase">Mobile Experience
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-4 justify-end">
+                        <div class="h-1 w-20 bg-primary"></div>
+                        <div class="h-1 w-10 bg-white/20"></div>
+                        <div class="h-1 w-10 bg-white/20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Elite Community Section -->
+    <section class="py-24 px-6 bg-black overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="flex-1">
+                    <h2 class="text-primary text-sm font-black uppercase tracking-[0.3em] mb-4">Comunidad Elite</h2>
+                    <h3 class="text-4xl md:text-6xl font-black mb-8 leading-tight">ENTRENA CON <br />LOS MEJORES</h3>
+                    <p class="text-lg text-slate-400 mb-8 italic">"La IA nos dio la data, la comunidad nos dio la
+                        fuerza. No es solo software, es una mentalidad compartida por atletas de alto rendimiento."</p>
+                    <div class="flex gap-4">
+                        <div class="h-1 w-20 bg-primary"></div>
+                        <div class="h-1 w-10 bg-white/20"></div>
+                        <div class="h-1 w-10 bg-white/20"></div>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <img alt="Grupo de atletas entrenando juntos" class="w-full h-[500px] object-cover grayscale"
+                        data-alt="Group of strong diverse athletes training intensely in a high-performance gym"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlrnfG4rNWdt_-gA63CA0UbByFgLuc9Wz7GxOuKC3afVqAjKD89jcpjAfkhutVa6xzNTFq34ovGzptZigJL02rmRdasczV3oqyH7dlNUt7pdKFTFazB-P5c6kNkvziRyoS8ixNkmivs6QVGFPVJXRQArPcv4DYCGq7neOe_lCG0fkyP834qiuDiuCmVkCJUAyfNeWzZ53aCg3LXP8ASiKjjycb21DTFy8geL_8yD0xqMq3lFg2cjcNJmBxoagOMC6gkaqPFSoqqSh" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="py-32 px-6 bg-primary text-black text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <h2 class="text-[20rem] font-black absolute -bottom-20 -left-20 leading-none">ELITE</h2>
+        </div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-7xl font-black uppercase mb-10 leading-none">REVOLUCIONA TU ENTRENAMIENTO HOY
+            </h2>
+            <button onclick="document.getElementById('registrationModal').classList.remove('hidden')"
+                class="bg-black text-white px-12 py-5 text-xl font-black uppercase tracking-widest hover:scale-105 transition-transform inline-block">
+                Empieza Ahora
+            </button>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-2xl">bolt</span>
+                <span class="font-black tracking-tighter text-xl">ELITE IA</span>
+            </div>
+            <div class="text-slate-500 text-sm font-medium uppercase tracking-widest">© 2024 ELITE IA TRAINING. TODOS
+                LOS DERECHOS RESERVADOS.</div>
+            <div class="flex flex-wrap gap-6 items-center">
+                <a class="text-white hover:text-primary transition-colors flex items-center gap-2 uppercase text-xs font-bold tracking-widest"
+                    href="https://w.app/s0h9q1" target="_blank">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                    </svg>
+                    WhatsApp
+                </a>
+                <a class="text-white hover:text-primary transition-colors flex items-center gap-2 uppercase text-xs font-bold tracking-widest"
+                    href="https://www.instagram.com/pfrocioipaz?igsh=c3Brbnc0NHgwaGs2" target="_blank">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                    Instagram
+                </a>
+                <a class="text-white hover:text-primary transition-colors uppercase text-xs font-bold tracking-widest pl-4 ml-4 md:border-l border-white/20"
+                    href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            onclick="document.getElementById('registrationModal').classList.add('hidden')"></div>
+
+        <!-- Modal Content -->
+        <div
+            class="relative bg-zinc-900 border border-primary/20 p-8 w-full max-w-md mx-4 font-sans text-white transform transition-all">
+            <!-- Close Button -->
+            <button onclick="document.getElementById('registrationModal').classList.add('hidden')"
+                class="absolute top-4 right-4 text-slate-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <div class="mb-8">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-primary text-2xl">bolt</span>
+                    <h3 class="text-2xl font-black tracking-tighter">ÚNETE A ELITE</h3>
+                </div>
+                <p class="text-sm text-slate-400">Comienza tu transformación hoy mismo.</p>
+            </div>
+
+            <form class="space-y-4"
+                onsubmit="event.preventDefault(); alert('¡Gracias por inscribirte! Nos pondremos en contacto contigo pronto.'); document.getElementById('registrationModal').classList.add('hidden');">
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Nombre
+                        Completo</label>
+                    <input type="text" required
+                        class="w-full bg-black border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary text-white p-3 outline-none transition-colors"
+                        placeholder="Tu nombre">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Correo
+                        Electrónico</label>
+                    <input type="email" required
+                        class="w-full bg-black border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary text-white p-3 outline-none transition-colors"
+                        placeholder="tu@correo.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Objetivo
+                        Principal</label>
+                    <select
+                        class="w-full bg-black border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary text-white p-3 outline-none transition-colors appearance-none">
+                        <option value="fuerza">Ganar Fuerza</option>
+                        <option value="resistencia">Mejorar Resistencia</option>
+                        <option value="perdida_peso">Pérdida de Peso</option>
+                        <option value="hipertrofia">Hipertrofia Muscular</option>
+                    </select>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-black font-black uppercase tracking-widest py-4 mt-6 hover:bg-white transition-colors">
+                    INSCRIBIRME AHORA
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
